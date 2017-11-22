@@ -3,6 +3,10 @@
 $baseColor: #2a2a2a;
 
 body{
+    background: url("../myndir/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     background-color: $baseColor;
     font-family: arial;
 }
@@ -15,7 +19,8 @@ header{
     justify-content: center;
     align-items: center;
     img{
-        width: 40em;
+        width: 60em;
+        margin: 1em 0;
     }
 }
 nav{
@@ -25,7 +30,7 @@ nav{
         display: flex;
         align-items: center;
         margin: 0;
-        padding: 0 4em;
+        padding: 0 8em;
         width: 100%;
         li{
             list-style-type: none;
