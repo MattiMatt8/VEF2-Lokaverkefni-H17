@@ -10,6 +10,14 @@ body{
     display: flex;
     justify-content: flex-end;
 }
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 40em;
+    }
+}
 nav{
     display: flex;
     background-color: lighten($baseColor,30%);
