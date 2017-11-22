@@ -4,6 +4,11 @@ $baseColor: #2a2a2a;
 
 body{
     background-color: $baseColor;
+    font-family: arial;
+}
+.haegri{
+    display: flex;
+    justify-content: flex-end;
 }
 nav{
     display: flex;
@@ -12,8 +17,8 @@ nav{
         display: flex;
         align-items: center;
         margin: 0;
-        padding: 0;
         padding: 0 4em;
+        width: 100%;
         li{
             list-style-type: none;
             a{
@@ -23,17 +28,16 @@ nav{
                 padding: 1.4em;
                 font-size: 1.1em;
                 &:hover{
-                    background-color: green;
+                    background-color: lighten($baseColor,10%);
                 }
             }
         }
-        .haegri{
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            flex-grow: 1;
-        }
     }
+}
+.haegri{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 .container{
     
