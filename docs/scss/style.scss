@@ -19,8 +19,15 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
     img{
         width: 52em;
+    }
+    h1{
+        font-size: 5em;
+        margin-top: 0;
+        color: #fff;
+        margin-top: -0.7em;
     }
 }
 nav{
@@ -61,30 +68,37 @@ h2{
     display: flex;
     color:white;
     margin: 2em auto;
-    max-width: 70em;
+    max-width: 75em;
     justify-content: center;
 }
 @mixin box{
     background: $liturBox;
-    margin: 0 1.7em;
+    margin: 0 0.5em;
     padding: 1em;
     background: rgba(255, 3, 0, 0.52);
 }
 .left{
     order: 1;
-    width: 25%;
+    width: 23%;
     @include box;
 }
 article{
     order: 2;
+    width: 54%;
     @include box;
     background: rgba(33, 6, 5, 0.56);
-    width: 50%;
+}
+.box{
+    border-bottom: red 2px solid;
+    padding-bottom: 1em;
+}
+.box:not(:first-child){
+    padding-top: 2em;
 }
 .right{
     order: 3;
     @include box;
-    width: 25%;
+    width: 23%;
 }
 footer{
     order: 4;
