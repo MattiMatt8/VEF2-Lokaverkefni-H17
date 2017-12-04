@@ -42,7 +42,8 @@ nav{
     ul{
         display: flex;
         align-items: center;
-        margin: 0 14em;
+        margin: 0 auto;
+        max-width: 70em;
         padding: 0;
         width: 100%;
         li{
@@ -69,6 +70,12 @@ h2{
     margin: 0;
     text-align: center;
     font-size: 1.6em;
+    padding: 1em 0;
+    border-bottom: 3px solid #000;
+}
+p{
+    padding: 0 1em;
+    line-height: 1.6em;
 }
 .container{
     display: flex;
@@ -86,6 +93,7 @@ h2{
 .left{
     order: 1;
     width: 23%;
+    height: 100%;
     @include box;
 }
 article{
@@ -93,6 +101,9 @@ article{
     width: 54%;
     @include box;
     background: rgba(33, 6, 5, 0.56);
+    h2{
+        border-bottom: 3px solid #ff8989;
+    }
 }
 .box{
     border-bottom: red 2px solid;
@@ -103,8 +114,9 @@ article{
 }
 .right{
     order: 3;
-    @include box;
     width: 23%;
+    height: 100%;
+    @include box;
 }
 footer{
     order: 4;
