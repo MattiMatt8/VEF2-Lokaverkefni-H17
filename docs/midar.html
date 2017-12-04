@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Lokaverkefni</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/midar.css">
+</head>
+<body>
+	<header>
+		<img src="myndir/logo.png">
+		<h1>Forsýning</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">Test</a></li>
+			<li><a href="#">Test2</a></li>
+			<li><a href="#">Test3</a></li>
+			<li><a href="#">Test4</a></li>
+			<li><a href="#">Test5</a></li>
+			<div class="haegri">
+				<li><a href="#">Test6</a></li>
+				<li><a href="#">Test7</a></li>
+			</div>
+		</ul>
+	</nav>
+	<div class="container">
+				<article>
+				<h2>Miðasala</h2>
+                <form action="kort.html" validate>
+                    <h4>Nafn</h4>
+                        <input type="name" name="Nafn" placeholder="Sláðu inn nafn" required>
+                    <h4>Símanúmer</h4>
+                        <input type="tel" name="Símanúmer" placeholder="7770412 " required pattern='\d{3}(?:[\-\s]?)\d{4}'>
+                    <h4>Netfang</h4>
+                        <input type="email" name="Netfang" placeholder="@gmail.com" required>
+                    <h4>Fæðingar dagur</h4>
+                        <input type="date" name="Dagsetning">
+                    <h4>Bíó hús</h4>
+                        <select style="width:286px;">
+                            <option value="Álfabakki">Álfabakki</option>
+                            <option value="Kringlan">kringlan</option>
+                            <option value="Egilshöll">Egilshöll</option>
+                            <option value="Akureyri">Akureyri</option>
+                            <option value="Keflavík">Keflavík</option>
+                        </select>
+                    <h4>Fjöldi miða</h4>
+                        <select style="width:286px;">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    <h4>Miðaval</h4>
+                        <input 
+                            type="checkbox"
+                            name="2D"
+                            value="2D">
+                                <span class="roboto">2D</span>
+                            <br>
+                        <input 
+                            type="checkbox" 
+                            name="3D" 
+                            value="3D">
+                                <span class="roboto">3D</span>
+                            <br>
+                        <input 
+                            type="checkbox" 
+                            name="VIP" 
+                            value="VIP">
+                                <span class="roboto">VIP (Aðeins í Álfabakka)</span>
+                    <h4>Athugasemdir</h4>
+                        <textarea   placeholder="eitthvað annað"></textarea>
+                    <input 
+                        class="confirm" 
+                        type="submit" 
+                        name="submit"
+                        value="Staðfesta">
+                </form>
+		</article>
+		<aside class="left">
+			<h2>Titill</h2>
+			LEFTT
+		</aside>
+		<aside class="right">
+			<h2>Titill</h2>
+		</aside>
+	</div>
+	<footer>
+		FOOTERR
+	</footer>
+</body>
+</html>
