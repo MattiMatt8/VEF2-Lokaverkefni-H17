@@ -123,3 +123,40 @@ footer{
     @include box;
     color: white;
 }
+#banner{
+    display: flex;
+    flex-flow:column;
+    border: 2px solid #000;
+    background-color:rgba(245, 103, 101, 0.52);
+    height: 28em;
+    .rautt{
+        height: 11em;
+        background: url("../myndir/lightsaber-rautt.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation-name: rauttS;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        top: 0;
+        left: 0;
+    }
+    .blatt{
+        height: 12em;
+        background: url("../myndir/lightsaber-blatt.png");
+        background-repeat: no-repeat;
+        background-size: 12em;
+        top: -10px;
+        left: -10px;
+    }
+    .star{
+        font-size: 2.5em;
+    }
+    .jedi{
+        font-size: 1.3em;   
+    }
+}
+@keyframes rauttS {
+    0%   {left:0px; top:0px;}
+    50%   {left:50px; top:0px;}
+    100%   {left:0px; top:0px;}
+}
