@@ -128,35 +128,44 @@ footer{
     flex-flow:column;
     border: 2px solid #000;
     background-color:rgba(245, 103, 101, 0.52);
+    overflow: hidden;
     height: 28em;
     .rautt{
-        height: 11em;
-        background: url("../myndir/lightsaber-rautt.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        animation-name: rauttS;
-        animation-duration: 4s;
+        height: 13em;
+        width: 100%;
+        position: relative;
+        animation-name: rauttA;
+        animation-duration: 8s;
         animation-iteration-count: infinite;
-        top: 0;
-        left: 0;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes rauttA {
+        from,to{}
+        0%  {left:-250px; top:-90px;}
+        30,70%   {left:12px; top:10px;transform: rotate(360deg);}
+        100%  {left:-250px; top:-90px;}
     }
     .blatt{
-        height: 12em;
-        background: url("../myndir/lightsaber-blatt.png");
-        background-repeat: no-repeat;
-        background-size: 12em;
-        top: -10px;
-        left: -10px;
+        height: 14em;
+        width: 100%;
+        top: -198px;
+        left: 0;
+        position: relative;
     }
     .star{
-        font-size: 2.5em;
+        font-family: starWars;
+        font-size: 4.2em;
+        position: relative;
+        margin: 0;
+        top: -222px;
+        left: 20px;
     }
     .jedi{
-        font-size: 1.3em;   
+        font-family: serif;
+        font-size: 1.8em; 
+        position: relative;
+        top: -235px;
+        left: 34px;
     }
-}
-@keyframes rauttS {
-    0%   {left:0px; top:0px;}
-    50%   {left:50px; top:0px;}
-    100%   {left:0px; top:0px;}
 }
