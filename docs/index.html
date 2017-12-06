@@ -8,21 +8,26 @@
 </head>
 <body>
 	<header>
-		<!--<picture>
-			<source srcset="img/mynd480.jpg" media="(max-width:30em)">
-			<source srcset="img/mynd960.jpg" media="(max-width:60em)">
-			<source srcset="img/mynd1600.jpg">
-			<img src="img/mynd960.jpg" alt="Roses">
-		</picture>-->
-		<img src="myndir/logo.png">
+		<picture>
+			<source srcset="myndir/logo-300.png" media="(max-width:31em)">
+			<source srcset="myndir/logo-500.png" media="(max-width:44em)">
+			<source srcset="myndir/logo-640.png" media="(max-width:59em)">
+			<source srcset="myndir/logo-800.png">
+			<img src="myndir/logo-800.png" alt="StarWars logo">
+		</picture>
+		<!--<img src="myndir/logo-800.png">-->
 		<h1>Frumsýning</h1>
 	</header>
 	<nav>
-		<ul>
-			<li><a href="#">Heim</a></li>
-			<li><a href="#">Bíóhús</a></li>
-			<li><a href="#">Verðskrá</a></li>
-			<li><a href="#">Kaupa miða</a></li>
+		<input type="checkbox" id="toggle">
+		<label for="toggle">Valmynd</label>
+		<ul class="navbar">
+			<div class="vinnstri">
+				<li><a href="#">Heim</a></li>
+				<li><a href="#">Bíóhús</a></li>
+				<li><a href="#">Verðskrá</a></li>
+				<li><a href="#">Kaupa miða</a></li>
+			</div>
 			<div class="haegri">
 				<li><a href="#">Um myndina</a></li>
 				<li><a href="#">Aðal leikarar</a></li>

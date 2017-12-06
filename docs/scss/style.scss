@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import 'normalize';
+@import 'normalize',
+        'animation';
 @font-face {
     font-family: starWars;
     src: url(../font/Starjhol.ttf);
@@ -7,11 +8,15 @@
 $baseColor: #2a2a2a;
 $liturBox: red;
 
+*{
+    box-sizing: border-box;
+}
 body{
     background: url("../myndir/bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     background-color: $baseColor;
     font-family: arial;
 }
@@ -24,11 +29,8 @@ header{
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    img{
-        width: 52em;
-    }
     h1{
-        font-size: 5em;
+        font-size: 2.7em;
         margin-top: 0;
         color: rgb(255, 181, 181);
         margin-top: -0.7em;
@@ -38,33 +40,70 @@ header{
 }
 nav{
     display: flex;
-    background: linear-gradient(to right, #000, rgba(212, 0, 0, 0.79), rgba(0, 0, 0, 0), rgba(212,0,0,0.79), #000);
+    flex-flow: column;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
     ul{
         display: flex;
+        flex-flow: column;
         align-items: center;
         margin: 0 auto;
-        max-width: 70em;
         padding: 0;
+        transition: all .5s cubic-bezier(0.4, 0, 1, 1);
+        position: fixed;
+        bottom: -22em;
         width: 100%;
+        background: rgba(175, 0, 0, 0.87);
+        z-index: 999;
         li{
             list-style-type: none;
-            a{
-                display: block;
-                text-decoration: none;
-                color: #c4c4c4;
-                padding: 1.4em;
-                font-size: 1.1em;
-                &:hover{
-                    background-color: rgba(0, 0, 0, 0.35);
-                }
+            width: 100%;
+            text-align: center;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: #c4c4c4;
+            padding: 1em;
+            font-size: 1.1em;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.35);
             }
         }
+        .haegri{
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
+            width: 100%;
+            text-align: center;
+            flex-grow: 1;
+        }
     }
-}
-.haegri{
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
+    input{
+        display: none
+    }
+    input:checked + label{
+        background-color: rgb(206, 0, 0);
+    }
+    input:checked ~ ul{
+        position: fixed;
+        bottom: 58px;
+    }
+    label{
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        color: #fff;
+        padding: .7em 0;
+        z-index: 999;
+        font-size: 1.3em;
+        font-weight: bold;
+        border: 3px solid rgba(2, 0, 0, 0.47);
+        background: rgba(175, 0, 0, 0.87);
+    }
 }
 h2{
     margin: 0;
@@ -74,159 +113,165 @@ h2{
     border-bottom: 3px solid #000;
 }
 p{
-    padding: 0 1em;
+    padding: 0 2em;
     line-height: 1.6em;
 }
 .container{
     display: flex;
+    flex-flow: column;
     color:white;
-    margin: 2em auto;
-    max-width: 75em;
+    margin: 1em auto;
+    margin-top: 0;
+    width: 100%;
     justify-content: center;
 }
 @mixin box{
     background: $liturBox;
     margin: 0 0.5em;
-    padding: 1em;
     background: rgba(255, 3, 0, 0.52);
+    box-sizing: border-box;
 }
 .left{
-    order: 1;
-    width: 23%;
+    order: 2;
+    height: 100%;
+    @include box;
+    background:none;
+}
+.right{
+    order: 3;
     height: 100%;
     @include box;
 }
 article{
-    order: 2;
-    width: 54%;
+    order: 1;
     @include box;
-    background: rgba(33, 6, 5, 0.56);
+    background: none;
     h2{
         border-bottom: 3px solid #ff8989;
+    }
+    img{
+        width: 10px;
     }
 }
 .box{
     border-bottom: red 2px solid;
     padding-bottom: 1em;
+    background: rgba(33, 6, 5, 0.56);
 }
 .box:not(:first-child){
-    padding-top: 2em;
-}
-.right{
-    order: 3;
-    width: 23%;
-    height: 100%;
-    @include box;
+    padding-top: 1em;
+    margin-top: 1em;
 }
 footer{
     order: 4;
     @include box;
     color: white;
-}
-#banner{
-    display: flex;
-    flex-flow:column;
-    border: 2px solid #000;
-    background-color:rgba(0, 0, 0, 0.45);
-    overflow: hidden;
-    height: 28em;
-    .rautt{
-        height: 13em;
-        width: 100%;
-        top: 10px;
-        left: 12px;
-        position: relative;
-        animation-name: rauttA;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-    }
-    @keyframes rauttA {
-        from,to {}
-        0%  {left:-250px; top:-90px;}
-        30%,70%   {left:12px; top:10px;transform: rotate(360deg);}
-        100%  {left:-250px; top:-90px;}
-    }
-    .blatt{
-        height: 14em;
-        width: 100%;
-        top: -198px;
-        left: 0;
-        position: relative;
-        animation-name: blattA;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-    }
-    @keyframes blattA {
-        from,to {}
-        0%  {left:250px; top:-160px;}
-        30%,70%   {left:0px; top:-198px;transform: rotate(-360deg);}
-        100%  {left:250px; top:-160px;}
-    }
-    .star{
-        font-family: starWars;
-        font-size: 4.2em;
-        position: relative;
-        margin: 0;
-        top: -188px;
-        left: 20px;
-        color: #e60f05;
-        line-height: 86px;
-        animation-name: starA;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-    }
-    @keyframes starA {
-        from,to {}
-        0%      {top:0px;}
-        30%,70% {top:-188px;}
-        100%    {top:0px;}
-    }
-    .jedi{
-        font-family: monospace;
-        font-size: 1.6em; 
-        position: relative;
-        top: -300px;
-        left: 8px;
-        text-transform: uppercase;
-        letter-spacing: 6px;
-        animation-name: jediA;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-    }
-    @keyframes jediA {
-        from,to {}
-        0%     {top:-112px;}
-        30%,70%{top:-300px;}
-        100%   {top:-112px;}
-    }
-    .kaupa {
-        position:  relative;
-        top: -266px;
-        left: 17px;
-        color: #ffbdbd;
-        animation-name: kaupaA;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-    }
-    @keyframes kaupaA {
-        from,to {}
-        0%     {top:-146px;}
-        30%,70%{top:-266px;}
-        100%   {top:-146px;}
-    }
+    padding-bottom: 5em;
+    margin: 0;
 }
 
-a:-webkit-any-link{
-    text-decoration: none;
-    color: #fff;
+@media screen and (min-width: 31em){
+    header{
+        h1{
+            font-size: 3.6em;
+        }
+    }
+    .container{
+        padding: 0 1em;
+    }
+}
+@media screen and (min-width: 44em){
+    header{
+        h1{
+            font-size: 4.2em;
+        }
+    }
+    .container{
+        flex-flow: row wrap;
+    }
+    article{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1em;
+    }
+    .left{
+        width: 45%;
+        margin: 0;
+    }
+    .right{
+        width: 55%;
+        margin: 0;
+    }
+}
+@media screen and (min-width: 51em){
+    header{
+        h1{
+            font-size: 5.2em;
+        }
+    }
+    .container{
+        max-width: 50em;
+    }
+} 
+@media screen and (min-width: 74em){
+    header{
+        h1{
+            font-size: 5em;
+        }
+    }
+    .container{
+        max-width: 76em;
+        flex-flow: row;
+    }
+    article{
+        order: 2;
+        width: 54%;
+    }
+    .left{
+        order: 1;
+        width: 23%;
+        background: rgba(255,3,0,0.52);
+        margin-right: 1em;
+    }
+    .right{
+        order: 3;
+        width: 23%;
+        margin-left: 1em;
+    }
+    nav{
+        background: linear-gradient(to right, #000, rgba(212, 0, 0, 0.79), rgba(0, 0, 0, 0), rgba(212,0,0,0.79), #000);
+        position: relative;
+        margin-bottom: 3em;
+        height: 5em;
+        label{
+            display: none;
+        }
+        ul{
+            background: none;
+            max-width: 74em;
+            flex-flow: row;
+            position: relative;
+            bottom: unset;
+            height: 100%;
+            .vinnstri{
+                display:flex;
+                flex-grow: 3;
+                width: 100%;
+                height: 100%;
+            }
+            .haegri{
+                flex-flow: row;
+                height: 100%;
+            }
+            li{
+                width: unset;
+                height: 100%;
+                a{
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
