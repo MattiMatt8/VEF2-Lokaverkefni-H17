@@ -6,33 +6,36 @@
     <title>Lokaverkefni</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/midar.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="myndir/favicon.ico" type="image/x-icon">
 </head>
-<body>
     <header>
-        <img src="myndir/logo.png">
-        <h1>Frumsýning</h1>
-    </header>
-    <nav>
-        <ul>
-            <img src="home.png">
-            <li><a href="#">Heim</a></li>
-            <img src="office.png">
-            <li><a href="#">Bíóhús</a></li>
-            <img src="table.png">
-            <li><a href="#">Verðskrá</a></li>
-            <img src="credit-card.png">
-            <li><a href="#">Kaupa miða</a></li>
-            <div class="haegri">
-                <img src="info.png">
-                <li><a href="#">Um myndina</a></li>
-                <img src="users.png">
-                <li><a href="#">Aðal leikarar</a></li>
-            </div>
-        </ul>
-    </nav>
+    <picture>
+      <source srcset="myndir/logo-300.png" media="(max-width:31em)">
+      <source srcset="myndir/logo-500.png" media="(max-width:44em)">
+      <source srcset="myndir/logo-640.png" media="(max-width:59em)">
+      <source srcset="myndir/logo-800.png">
+      <img src="myndir/logo-800.png" alt="StarWars logo">
+    </picture>
+    <h1>Frumsýning</h1>
+  </header>
+  <nav>
+    <input type="checkbox" id="toggle">
+    <label for="toggle">Valmynd</label>
+    <ul class="navbar">
+      <div class="vinnstri">
+        <li><a href="index.html">Heim</a></li>
+        <li><a href="#">Bíóhús</a></li>
+        <li><a href="verdskra.html">Verðskrá</a></li>
+        <li><a href="mida.html">Kaupa miða</a></li>
+      </div>
+      <div class="haegri">
+        <li><a href="#">Um myndina</a></li>
+        <li><a href="#">Aðal leikarar</a></li>
+      </div>
+    </ul>
+  </nav>
     <div class="container">
-                <article>
+            <article>
                 <h2>Miðasala</h2>
                 <form action="kort.html" validate>
                     <h4>Nafn</h4>
@@ -64,24 +67,15 @@
                             <option value="9">9</option>
                             <option value="10">10</option>
                         </select>
-                    <h4>Miðaval</h4>
-                        <input class="mhm" 
-                            type="checkbox"
-                            name="2D"
-                            value="2D">
-                                <span class="roboto">2D</span>
-                            <br>
-                        <input class="mhm" 
-                            type="checkbox" 
-                            name="3D" 
-                            value="3D">
-                                <span class="roboto">3D</span>
-                            <br>
-                        <input class="mhm" 
-                            type="checkbox" 
-                            name="VIP" 
-                            value="VIP">
-                                <span class="roboto">VIP (Aðeins í Álfabakka)</span>
+                     <div class="mhm">
+                    <h4>Miðaval</h4> 
+                         <input type="radio" id="2d" value="2d" name="syning" checked>
+                            <label for="2d">2D</label>
+                        <input type="radio" id="3d" value="3d" name="syning">
+                            <label for="3d">3D</label>
+                        <input type="radio" id="vip" value="vip" name="syning">
+                            <label for="vip">VIP</label>
+                        <div>
                     <h4>Athugasemdir</h4>
                         <textarea   placeholder="eitthvað annað"></textarea>
                     <input 

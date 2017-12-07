@@ -2,9 +2,6 @@
 
 $Mycolor : black; 
 $Mycolor1 : white;
-$Mypx : 5px;
-$Mypx1 : 10px;
-$Mypx2 : 2opx;
 
 
 
@@ -14,10 +11,10 @@ $Mypx2 : 2opx;
 	margin-left: 20px;
 }
 textarea{
-	width: 286px;
-	height: 60px;
+	width: 500px;
+	height: 100px;
 	font-family: 'Roboto';
-	border:0px solid black;
+	c:0px solid black;
 	outline: none;
 }
 input,select{
@@ -33,7 +30,7 @@ input,select{
 	cursor: pointer;
 }
 .confirm{
-	width: 286.69px;
+	width: 290px;
 	margin-top: 30px;
 	color: black;
 	font-weight: bold;
