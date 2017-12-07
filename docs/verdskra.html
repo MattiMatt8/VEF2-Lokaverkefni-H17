@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
-	<title>Lokaverkefni</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/tafla.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Lokaverkefni</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/tafla.css">
+  <link rel="shortcut icon" href="myndir/favicon.ico" type="image/x-icon">
 </head>
 <body>
-	<header>
-		<img src="myndir/logo.png">
-	</header>
-	<nav>
-		<ul>
-			<li><a href="#">Test</a></li>
-			<li><a href="#">Test2</a></li>
-			<li><a href="#">Test3</a></li>
-			<li><a href="#">Test4</a></li>
-			<li><a href="#">Test5</a></li>
-			<div class="haegri">
-				<li><a href="#">Test6</a></li>
-				<li><a href="#">Test7</a></li>
-			</div>
-		</ul>
-	</nav>
-	<div class="container">
-		<article>
-
-			<h2>Aðaldálkur</h2>
+  <header>
+    <picture>
+      <source srcset="myndir/logo-300.png" media="(max-width:31em)">
+      <source srcset="myndir/logo-500.png" media="(max-width:44em)">
+      <source srcset="myndir/logo-640.png" media="(max-width:59em)">
+      <source srcset="myndir/logo-800.png">
+      <img src="myndir/logo-800.png" alt="StarWars logo">
+    </picture>
+    <h1>Frumsýning</h1>
+  </header>
+  <nav>
+    <input type="checkbox" id="toggle">
+    <label for="toggle">Valmynd</label>
+    <ul class="navbar">
+      <div class="vinnstri">
+        <li><a href="index.html">Heim</a></li>
+        <li><a href="#">Bíóhús</a></li>
+        <li><a href="verdskra.html">Verðskrá</a></li>
+        <li><a href="mida.html">Kaupa miða</a></li>
+      </div>
+      <div class="haegri">
+        <li><a href="#">Um myndina</a></li>
+        <li><a href="#">Aðal leikarar</a></li>
+      </div>
+    </ul>
+  </nav>
+  <div class="container">
+    <article>
+      <h2>Verðská</h2>
 <table>
-  <caption>Statement Summary</caption>
+  <br>
   <thead>
     <tr>
       <th scope="col">Verð</th>
@@ -64,11 +74,27 @@
       <td data-label="Period">2.900 kr</td>
     </tr>
   </tbody>
-</table>						
-		</article>
-	</div>
-	<footer>
-		asdfdsaasf
-	</footer>
+</table>
+  <div>           
+    </article>
+    <aside class="left">
+      <a href="midar.html">
+        <section id="banner">
+          <img class="rautt" src="myndir/lightsaber-rautt.png">
+          <img class="blatt" src="myndir/lightsaber-blatt.png">
+          <h3 class="star">Star Wars</h3>
+          <h3 class="jedi">The Last Jedi</h3>
+          <h4 class="kaupa">Tryggðu þér miða fyrirfram</h4>
+        </section>
+      </a>
+    </aside>
+      <aside class="right">
+      <h2>Sýningar</h2>
+      <p>Allar frumsýningarnar eru 14. desember kl. 21:00 í öllum bíóhúsum sambíóa.</p>
+    </aside>
+  </div>
+  <footer>
+    asdfdsaasf
+  </footer>
 </body>
 </html>
