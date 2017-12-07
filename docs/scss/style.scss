@@ -12,17 +12,13 @@ $liturBox: red;
     box-sizing: border-box;
 }
 body{
-    background: url("../myndir/bg.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.57) ), url(../myndir/bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-color: $baseColor;
     font-family: arial;
-}
-.haegri{
-    display: flex;
-    justify-content: flex-end;
 }
 header{
     display: flex;
@@ -55,7 +51,7 @@ nav{
         bottom: -22em;
         width: 100%;
         background: rgba(175, 0, 0, 0.87);
-        z-index: 999;
+        z-index: 998;
         li{
             list-style-type: none;
             width: 100%;
@@ -113,7 +109,6 @@ h2{
     border-bottom: 3px solid #000;
 }
 p{
-    padding: 0 2em;
     line-height: 1.6em;
 }
 .container{
@@ -141,6 +136,7 @@ p{
     order: 3;
     height: 100%;
     @include box;
+    padding: 0 2em;
 }
 article{
     order: 1;
@@ -149,14 +145,12 @@ article{
     h2{
         border-bottom: 3px solid #ff8989;
     }
-    img{
-        width: 10px;
-    }
 }
 .box{
     border-bottom: red 2px solid;
     padding-bottom: 1em;
     background: rgba(33, 6, 5, 0.56);
+    padding: 0 2em;
 }
 .box:not(:first-child){
     padding-top: 1em;
@@ -166,10 +160,30 @@ footer{
     order: 4;
     @include box;
     color: white;
-    padding-bottom: 5em;
     margin: 0;
+    padding: 1.4em 2em;
+    padding-bottom: 3em;
+    div{
+        padding-bottom: 1em;
+    }
 }
-
+.adalleikarar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 1.3em;
+    .adal{
+        width: 7em;
+        text-align: center;
+    }
+    img{
+        width: 7em;
+    }
+    h3{
+        margin: 1em auto;
+        width: 5em;
+    }
+}
 @media screen and (min-width: 31em){
     header{
         h1{
@@ -177,6 +191,12 @@ footer{
         }
     }
     .container{
+        padding: 0 1em;
+    }
+    footer{
+        padding-bottom: 4em;
+    }
+    .footerC{
         padding: 0 1em;
     }
 }
@@ -202,6 +222,9 @@ footer{
         width: 55%;
         margin: 0;
     }
+    .footerC{
+        padding: 0 2em;
+    }
 }
 @media screen and (min-width: 51em){
     header{
@@ -212,8 +235,31 @@ footer{
     .container{
         max-width: 50em;
     }
+    .footerC{
+        margin: 0 auto;
+        padding: 0 3em;
+        max-width: 50em;
+        display: flex;
+        align-content: center;
+        .haegri{
+            display: flex;
+            flex-grow: 3;
+            justify-content: flex-end;
+        }
+    }
 } 
 @media screen and (min-width: 74em){
+    footer{
+        padding-bottom: 0;
+        height: 5em;
+        display:flex;
+        align-items: center;
+        width: 100%;
+        .footerC{
+            width: 100%;
+            max-width: 76em;
+        }
+    }
     header{
         h1{
             font-size: 5em;

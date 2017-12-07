@@ -1,0 +1,109 @@
+#banner{
+    display: flex;
+    flex-flow:column;
+    border: 2px solid #000;
+    background-color:rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    height: 28em;
+    max-width: 245px;
+    margin: .7em auto;
+    .rautt{
+        height: 13em;
+        width: 100%;
+        top: 10px;
+        left: 12px;
+        position: relative;
+        animation-name: rauttA;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes rauttA {
+        from,to {}
+        0%  {left:-250px; top:-90px;}
+        30%,70%   {left:12px; top:10px;transform: rotate(360deg);}
+        100%  {left:-250px; top:-90px;}
+    }
+    .blatt{
+        height: 14em;
+        width: 100%;
+        top: -198px;
+        left: 0;
+        position: relative;
+        animation-name: blattA;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes blattA {
+        from,to {}
+        0%  {left:250px; top:-160px;}
+        30%,70%   {left:0px; top:-198px;transform: rotate(-360deg);}
+        100%  {left:250px; top:-160px;}
+    }
+    .star{
+        font-family: starWars;
+        font-size: 4.2em;
+        position: relative;
+        margin: 0;
+        top: -188px;
+        left: 20px;
+        color: #e60f05;
+        line-height: 86px;
+        animation-name: starA;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes starA {
+        from,to {}
+        0%      {top:0px;}
+        30%,70% {top:-188px;}
+        100%    {top:0px;}
+    }
+    .jedi{
+        font-family: monospace;
+        font-size: 1.6em; 
+        position: relative;
+        top: -300px;
+        left: 8px;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        animation-name: jediA;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes jediA {
+        from,to {}
+        0%     {top:-112px;}
+        30%,70%{top:-300px;}
+        100%   {top:-112px;}
+    }
+    .kaupa {
+        position:  relative;
+        top: -266px;
+        left: 17px;
+        color: #ffbdbd;
+        animation-name: kaupaA;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes kaupaA {
+        from,to {}
+        0%     {top:-146px;}
+        30%,70%{top:-266px;}
+        100%   {top:-146px;}
+    }
+}
+
+a:-webkit-any-link{
+    text-decoration: none;
+    color: #fff;
+}
