@@ -67,6 +67,9 @@ nav{
                 background-color: rgba(0, 0, 0, 0.35);
             }
         }
+        .active{
+            background-color: rgba(0, 0, 0, 0.35);
+        }
         .haegri{
             display: flex;
             flex-flow: column;
@@ -139,12 +142,40 @@ p{
 }
 .boxR{
     @include box;
+    margin: 0 0.1em;
     padding: 0 2em;
     margin-bottom: 1em;
     padding-bottom: 1.5em;
     p{
         margin: .4em 0;
     }
+    table{
+        margin-top: 1em;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    table, th, td {
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;    
+    }
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    img{
+        height: 4em;
+    }
+}
+.boxR.banner{
+    padding: 0;
+    height: 100%;
+    padding-top: 0.1em;
 }
 article{
     order: 1;
@@ -174,6 +205,9 @@ footer{
     div{
         padding-bottom: 1em;
     }
+    a:hover{
+        text-decoration: underline;
+    }
 }
 .adalleikarar{
     display: flex;
@@ -192,7 +226,10 @@ footer{
         width: 5em;
     }
 }
-@media screen and (min-width: 31em){
+.vinnstri{
+    width: 100%;
+}
+@media screen and (min-width: 31em){ // 496px
     header{
         h1{
             font-size: 3.6em;
@@ -208,7 +245,7 @@ footer{
         padding: 0 1em;
     }
 }
-@media screen and (min-width: 44em){
+@media screen and (min-width: 44em){ // 704px
     header{
         h1{
             font-size: 4.2em;
@@ -234,7 +271,7 @@ footer{
         padding: 0 2em;
     }
 }
-@media screen and (min-width: 51em){
+@media screen and (min-width: 51em){ // 816px
     header{
         h1{
             font-size: 5.2em;
@@ -256,7 +293,7 @@ footer{
         }
     }
 } 
-@media screen and (min-width: 74em){
+@media screen and (min-width: 74em){ // 1184px
     footer{
         padding-bottom: 0;
         height: 5em;
@@ -302,6 +339,10 @@ footer{
         height: 5em;
         label{
             display: none;
+        }
+        input:checked ~ ul{
+            position: relative;
+            bottom: unset;
         }
         ul{
             background: none;
