@@ -1,40 +1,40 @@
-@charset "UTF-8";
-
 $Mycolor : black; 
 $Mycolor1 : white;
 
 
 
 .mhm{
-	width: 10px;
 	margin-top: 20px;
-	margin-left: 20px;
+    input, select{
+        width: unset;
+    }
 }
 textarea{
 	width: 500px;
 	height: 100px;
 	font-family: 'Roboto';
-	c:0px solid black;
 	outline: none;
 }
 input,select{
 	border: 0px white solid;
-	margin: 5px;
+	margin: 5px 0;
 	padding: 10px;
 	width: 80%;
 	outline: none;
 }
 .confirm:hover{
-	background-color: $Mycolor;
+	background-color: #800;
 	color: $Mycolor1;
 	cursor: pointer;
 }
 .confirm{
-	width: 290px;
-	margin-top: 30px;
-	color: black;
+	width: 13em;
+	margin-top: 1em;
+	color: #f3f3f3;
 	font-weight: bold;
-	font-family: 'Roboto';
 	font-size: 16px;
+    background: rgba(255, 2, 0, 0.61);
 }
-
+form{
+    margin-bottom: 2em;
+}

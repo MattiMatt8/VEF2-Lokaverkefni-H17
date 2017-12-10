@@ -3,98 +3,145 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Lokaverkefni</title>
+    <title>Miðar | StarWars Frumsýning</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/midar.css">
     <link rel="shortcut icon" href="myndir/favicon.ico" type="image/x-icon">
 </head>
+<body>
     <header>
-    <picture>
-      <source srcset="myndir/logo-300.png" media="(max-width:31em)">
-      <source srcset="myndir/logo-500.png" media="(max-width:44em)">
-      <source srcset="myndir/logo-640.png" media="(max-width:59em)">
-      <source srcset="myndir/logo-800.png">
-      <img src="myndir/logo-800.png" alt="StarWars logo">
-    </picture>
-    <h1>Frumsýning</h1>
-  </header>
-  <nav>
-    <input type="checkbox" id="toggle">
-    <label for="toggle">Valmynd</label>
-    <ul class="navbar">
-      <div class="vinnstri">
-        <li><a href="index.html">Heim</a></li>
-        <li><a href="#">Bíóhús</a></li>
-        <li><a href="verdskra.html">Verðskrá</a></li>
-        <li><a href="mida.html">Kaupa miða</a></li>
-      </div>
-      <div class="haegri">
-        <li><a href="#">Um myndina</a></li>
-        <li><a href="#">Aðal leikarar</a></li>
-      </div>
-    </ul>
-  </nav>
+        <picture>
+            <source srcset="myndir/logo-300.png" media="(max-width:31em)">
+            <source srcset="myndir/logo-500.png" media="(max-width:44em)">
+            <source srcset="myndir/logo-640.png" media="(max-width:59em)">
+            <source srcset="myndir/logo-800.png">
+            <img src="myndir/logo-800.png" alt="StarWars logo">
+        </picture>
+        <h1>Frumsýning</h1>
+    </header>
+    <nav>
+        <input type="checkbox" id="toggle">
+        <label for="toggle">Valmynd</label>
+        <ul class="navbar">
+            <div class="vinnstri">
+                <li><a href="index.html" class="active">Heim</a></li>
+                <li><a href="biohus.html">Bíóhús</a></li>
+                <li><a href="verdskra.html">Verðskrá</a></li>
+                <li><a href="midar.html">Kaupa miða</a></li>
+            </div>
+            <div class="haegri">
+                <li><a href="index.html#um-myndina">Um myndina</a></li>
+                <li><a href="index.html#adalleikarar">Aðal leikarar</a></li>
+            </div>
+        </ul>
+    </nav>
     <div class="container">
-            <article>
-                <h2>Miðasala</h2>
-                <form action="kort.html" validate>
-                    <h4>Nafn</h4>
-                        <input type="name" name="Nafn" placeholder="Sláðu inn nafn" required>
-                    <h4>Símanúmer</h4>
-                        <input type="tel" name="Símanúmer" placeholder="7770412 " required pattern='\d{3}(?:[\-\s]?)\d{4}'>
-                    <h4>Netfang</h4>
-                        <input type="email" name="Netfang" placeholder="@gmail.com" required>
-                    <h4>Fæðingar dagur</h4>
-                        <input type="date" name="Dagsetning">
-                    <h4>Bíó hús</h4>
-                        <select style="width:286px;">
-                            <option value="Álfabakki">Álfabakki</option>
-                            <option value="Kringlan">kringlan</option>
-                            <option value="Egilshöll">Egilshöll</option>
-                            <option value="Akureyri">Akureyri</option>
-                            <option value="Keflavík">Keflavík</option>
-                        </select>
-                    <h4>Fjöldi miða</h4>
-                        <select style="width:286px;">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                     <div class="mhm">
-                    <h4>Miðaval</h4> 
-                         <input type="radio" id="2d" value="2d" name="syning" checked>
-                            <label for="2d">2D</label>
-                        <input type="radio" id="3d" value="3d" name="syning">
-                            <label for="3d">3D</label>
-                        <input type="radio" id="vip" value="vip" name="syning">
-                            <label for="vip">VIP</label>
-                        <div>
-                    <h4>Athugasemdir</h4>
-                        <textarea   placeholder="eitthvað annað"></textarea>
-                    <input 
-                        class="confirm" 
-                        type="submit" 
-                        name="submit"
-                        value="Staðfesta">
-                </form>
-        </article>
+    <article>
+        <div class="box">
+            <h2>Miðasala</h2>
+            <form action="kort.html" validate>
+            <h4>Nafn</h4>
+            <input type="name" name="Nafn" placeholder="Sláðu inn fullt nafn" required>
+            <h4>Símanúmer</h4>
+            <input type="tel" name="Símanúmer" placeholder="7770412" required pattern='\d{3}(?:[\-\s]?)\d{4}'>
+            <h4>Netfang</h4>
+            <input type="email" name="Netfang" placeholder="netfang@sida.com" required>
+            <h4>Fæðingar dagur</h4>
+            <input type="date" name="Dagsetning">
+            <h4>Bíó hús</h4>
+            <select style="width:286px;">
+                <option value="Álfabakki">Álfabakki</option>
+                <option value="Kringlan">kringlan</option>
+                <option value="Egilshöll">Egilshöll</option>
+                <option value="Akureyri">Akureyri</option>
+                <option value="Keflavík">Keflavík</option>
+            </select>
+            <h4>Fjöldi miða</h4>
+            <select style="width:286px;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 +</option>
+            </select>
+            <h4>Miðaval</h4> 
+            <div class="mhm">
+                 <input type="radio" id="2d" value="2d" name="syning" checked>
+                    <label for="2d">2D</label>
+                <input type="radio" id="3d" value="3d" name="syning">
+                    <label for="3d">3D</label>
+                <input type="radio" id="vip" value="vip" name="syning">
+                    <label for="vip">VIP</label>
+            </div>
+            <h4>Athugasemdir</h4>
+            <textarea  placeholder="Eitthvað annað"></textarea>
+            <input 
+                class="confirm" 
+                type="submit" 
+                name="submit"
+                value="Staðfesta">
+            </form>
+        </div>
+    </article>
         <aside class="left">
-            <h2>Titill</h2>
-            LEFTT
+            <a href="midar.html">
+                <section id="banner">
+                    <img class="rautt" src="myndir/lightsaber-rautt.png" alt="LightSaber Rautt">
+                    <img class="blatt" src="myndir/lightsaber-blatt.png" alt="LightSaber Blátt">
+                    <h3 class="star">Star Wars</h3>
+                    <h3 class="jedi">The Last Jedi</h3>
+                    <h4 class="kaupa">Tryggðu þér miða fyrirfram</h4>
+                </section>
+            </a>
         </aside>
         <aside class="right">
-            <h2>Titill</h2>
+            <div class="boxR">
+                <h2>Almennt</h2>
+                <div class="logo">
+                    <img src="myndir/sambio.png">
+                </div>
+                <p>Þann 14. desember þá verður frumsýning á þeirri allra nýju Star Wars mynd The Last Jedi.  Myndin verður sýnd kl. 21:00 í öllum bíóhúsum Sambíóa.</p>
+            </div>
+            <div class="boxR">
+                <h2>Dagskrá</h2>
+                <table style="width:100%">
+                    <tr>
+                        <th>Kl.</th>
+                        <th>Viðburður</th>
+                    </tr>
+                    <tr>
+                        <td>20:40</td>
+                        <td>Hleypt inn í sali</td>
+                    </tr>
+                    <tr>
+                        <td>20:50</td>
+                        <td>Auglýsingar</td>
+                    </tr>
+                    <tr>
+                        <td>21:00</td>
+                        <td>Bíómyndin byrjar</td>
+                    </tr>
+                    <tr>
+                        <td>22:00</td>
+                        <td>Auglýsingarhlé</td>
+                    </tr>
+                    <tr>
+                        <td>23:00</td>
+                        <td>Bíómyndin búin</td>
+                    </tr>
+                </table>
+            </div>
         </aside>
     </div>
     <footer>
-        FOOTERR
+        <div class="footerC">
+            <div class="vinnstri">&copy Matti og Óðinn | <a href="hopurinn.html">Hópurinn</a></div>
+            <div class="haegri">Hægri</div>
+        </div>
     </footer>
 </body>
 </html>
