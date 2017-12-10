@@ -1,0 +1,65 @@
+
+#biohus{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    img{
+        max-width: 26em;
+    }
+    h2{
+        border:none;
+        font-size: 2em;
+    }
+}
+.biohus{
+    img{
+        width: 100%;
+    }
+    p{
+        padding: 1em 0;
+        word-spacing: 1px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #alfa,
+    #egils,
+    #kringla,
+    #akur,
+    #kefla{
+        width: 100%;
+    }
+    iframe#alfa{
+        height: 259px;
+    }
+    iframe#egils{
+        height: 251px;
+    }
+    iframe#kringla{
+        height: 232px;
+    }
+    iframe#akur{
+        height: 228px;
+    }
+    iframe#kefla{
+        height: 250px;
+    }
+    .box{
+        padding-bottom: 1em;
+    }
+}
+@media screen and (min-width: 51em){ // 816px
+    .biohus{
+        img{
+            width: 50%;
+        }
+        #alfa,
+        #egils,
+        #kringla,
+        #akur,
+        #kefla{
+            width: 49%;
+        }
+    } 
+}

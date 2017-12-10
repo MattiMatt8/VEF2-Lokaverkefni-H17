@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import 'normalize',
-        'animation';
+        'animation',
+        'tafla',
+        'biohus',
+        'hopurinn',
+        'midar';
 @font-face {
     font-family: starWars;
     src: url(../font/Starjhol.ttf);
@@ -229,6 +233,12 @@ footer{
 .vinnstri{
     width: 100%;
 }
+.r2{
+    .right{
+        width: 100%;
+        margin-top: 1em;
+    }
+}
 @media screen and (min-width: 31em){ // 496px
     header{
         h1{
@@ -330,6 +340,15 @@ footer{
         margin-left: 1em;
         img{
             width: 100%;
+        }
+    }
+    .r2a{
+        width: 77%;
+    }
+    .r2{
+        .right{
+            width: 23%;
+            margin-top: 0;
         }
     }
     nav{
